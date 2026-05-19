@@ -15,7 +15,9 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 
 const App = () => {
-  const [dark, setDark] = useState(() => localStorage.getItem('eventflow_theme') !== 'light');
+ const [dark, setDark] = useState(
+  () => localStorage.getItem('eventflow_theme') === 'dark'
+);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark);

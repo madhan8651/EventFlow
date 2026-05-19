@@ -36,7 +36,7 @@ const Navbar = ({ dark, setDark }) => {
           <img
             src={logo}
             alt="EventFlow Logo"
-            className="h-14 w-auto"
+            className="h-14 w-auto rounded-lg bg-white p-1"
           />
 
         </Link>

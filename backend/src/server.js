@@ -29,12 +29,11 @@ app.use(helmet({ crossOriginResourcePolicy: false }));
 
 app.use(
   cors({
-    origin: true,
-    credentials: true
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   })
 );
-
-app.options('*', cors());
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));

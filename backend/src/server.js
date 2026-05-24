@@ -29,10 +29,7 @@ app.use(helmet({ crossOriginResourcePolicy: false }));
 
 app.use(
   cors({
-    origin: [
-      'https://event-flow-45ze85kmz-madhan-eventflow.vercel.app',
-      'http://localhost:5173'
-    ],
+    origin: true,
     credentials: true
   })
 );
